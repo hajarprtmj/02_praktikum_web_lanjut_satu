@@ -28,4 +28,17 @@ Route::get('/articles/{id}', function($id) {
     return 'Halaman Artikel dengan id ' . $id;
 });
 
+// PRAKTIIKUM - 2 Konsep Controller
+
+//Route::get('/', 'App\Http\Controllers\PageController@index');
+//Route::get('/about', 'App\Http\Controllers\PageController@about');
+//Route::get('/articles/{id}', 'App\Http\Controllers\PageController@articles');
+
+// -- MODIFIKASI SINGLE ACTION --
+
+Route::get('/', 'App\Http\Controllers\HomeController@hello');
+Route::get('/about', 'App\Http\Controllers\AboutController@about');
+Route::get('/articles/{id}', 'App\Http\Controllers\ArticleController@articles');
+
+
 
